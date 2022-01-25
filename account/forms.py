@@ -21,7 +21,7 @@ class RegisterForm(forms.ModelForm):
         data = self.cleaned_data
         # {'password': 'qwerty', 'password_conf': 'qwerty'}
         password = data.get('password')
-        password_conf = data.pop('password_confirmation')
+        password_conf = data.pop(   'password_confirmation')
         if password != password_conf:
             raise forms.ValidationError('Passwords do not match!')
         return data
