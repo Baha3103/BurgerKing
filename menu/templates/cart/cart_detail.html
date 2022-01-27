@@ -24,7 +24,11 @@
   </div>
 </div>
 {% endfor %}
+</div>
   <a href="{% url 'cart_clear' %}">
-<img style="width: 45px; height: auto;" src="{% static 'plastic-bin.jpg' %}">
+<img style="width: 45px; height: auto;" src="{% static 'bin.png' %}">
   </a>
-    {% endblock %}
+  <a  class="btn btn-danger" href="{% url 'order-create' %}">
+    Place order
+  </a>
+{% endblock %}
