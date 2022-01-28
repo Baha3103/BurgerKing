@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load cart_tag %}
 {% block content %}
     <form method="post" enctype="multipart/form-data">
         {{ order_form.as_p }}
@@ -22,6 +22,7 @@
       <td><img style="width: 90px; height: auto;" src="{{ val.image }}"></td>
       <td>{{ val.price }}$</td>
       <td>{{ val.quantity }}</td>
+        <td>{{ val.price|multiply:val.quantity }}</td>
     </tr>
   {% endfor %}
   </tbody>
